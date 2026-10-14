@@ -1,0 +1,80 @@
+name: Benchmark
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+    inputs:
+      duration:
+        description: 'Seconds per test (default 40)'
+        required: false
+        default: '40'
+      rounds:
+        description: 'Number of rounds (default 1)'
+        required: false
+        default: '1'
+      only:
+        description: 'Comma-separated framework list (blank = all)'
+        required: false
+        default: ''
+
+concurrency:
+  group: benchmark
+  cancel-in-progress: true
+
+jobs:
+  benchmark:
+    name: Run benchmarks
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Set CPU governor to performance (best-effort)
+        run: |
+          sudo cpupower frequency-set -g performance 2>/dev/null || true
+
+      - name: Run benchmarks
+        id: bench
+        env:
+          BENCH_DURATION: ${{ github.event.inputs.duration || '40' }}
+          BENCH_ROUNDS:   ${{ github.event.inputs.rounds   || '1'  }}
+          BENCH_ONLY:     ${{ github.event.inputs.only     || ''   }}
+        run: |
+          ARGS="-d $BENCH_DURATION -r $BENCH_ROUNDS"
+          if [ -n "$BENCH_ONLY" ]; then
+            ARGS="$ARGS --only $BENCH_ONLY"
+          fi
+          node benchmarks.js $ARGS
+
+      - name: Commit results
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add README.md RESULTS.md results/latest.json results/
+
+          # Exit gracefully when there is nothing new to commit
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          git commit -m "chore: benchmark results ${TIMESTAMP} [skip ci]"
+          git push
