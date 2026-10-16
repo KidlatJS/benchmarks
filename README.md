@@ -36,7 +36,7 @@ with hand-written routing and no third-party dependencies.
 
 | Framework | Version | Notes |
 | :-- | :-- | :-- |
-| **kidlat** | 2.3.0 | Native C++ HTTP layer; focus of this benchmark |
+| **kidlat** | latest | Native C++ HTTP layer; focus of this benchmark |
 | node:http | — | Node built-in baseline |
 | fastify | latest | Schema-validated, plugin ecosystem |
 | express | latest | |

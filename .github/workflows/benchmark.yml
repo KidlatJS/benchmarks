@@ -45,6 +45,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install the latest Kidlat
+        run: |
+          npm install --no-save kidlat@latest
+          echo "Benchmarking kidlat@$(node -p "require('./node_modules/kidlat/package.json').version")" | tee -a "$GITHUB_STEP_SUMMARY"
+
       - name: Set CPU governor to performance (best-effort)
         run: |
           sudo cpupower frequency-set -g performance 2>/dev/null || true
