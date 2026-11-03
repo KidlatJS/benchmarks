@@ -1,0 +1,1022 @@
+{
+  "env": {
+    "date": "2026-11-03T06:15:39.037Z",
+    "node": "v22.23.4",
+    "os": "Linux 7.0.0-1017-azure (x64)",
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "threads": 4,
+    "memoryGB": 16
+  },
+  "settings": {
+    "connections": 100,
+    "pipelining": 10,
+    "duration": 40,
+    "warmup": 5,
+    "rounds": 1,
+    "scenarios": [
+      "json",
+      "params",
+      "post"
+    ]
+  },
+  "versions": {
+    "node-http": "22.23.4",
+    "kidlat": "2.6.0",
+    "fastify": "5.12.7",
+    "express": "5.3.0",
+    "koa": "3.2.1",
+    "hapi": "21.4.10",
+    "hono": "4.13.13",
+    "h3": "2.0.2",
+    "polka": "0.5.2",
+    "restify": "12.0.0",
+    "0http": "5.2.0",
+    "tinyhttp": "3.0.11",
+    "hyper-express": "7.0.2",
+    "uws": "20.71.0"
+  },
+  "results": {
+    "node-http": {
+      "json": {
+        "reqPerSec": 53742.4,
+        "latencyAvg": 18.12,
+        "latencyP99": 31,
+        "throughputMBs": 10.558203125,
+        "totalRequests": 2149677,
+        "cpuPerReqMicros": 18.721136245119617,
+        "rssMB": 102.85546875,
+        "errors": 0
+      },
+      "params": {
+        "reqPerSec": 53199.2,
+        "latencyAvg": 18.31,
+        "latencyP99": 36,
+        "throughputMBs": 10.096484375,
+        "totalRequests": 2128074,
+        "cpuPerReqMicros": 18.861288188286686,
+        "rssMB": 108.078125,
+        "errors": 0
+      },
+      "post": {
+        "reqPerSec": 26856.4,
+        "latencyAvg": 36.73,
+        "latencyP99": 75,
+        "throughputMBs": 13.599609375,
+        "totalRequests": 1074213,
+        "cpuPerReqMicros": 37.86262035555332,
+        "rssMB": 115.640625,
+        "errors": 0
+      }
+    },
+    "kidlat": {
+      "json": {
+        "reqPerSec": 111264,
+        "latencyAvg": 8.37,
+        "latencyP99": 9,
+        "throughputMBs": 20.903125,
+        "totalRequests": 4450610,
+        "cpuPerReqMicros": 8.63444628938505,
+        "rssMB": 64.4765625,
+        "errors": 0
+      },
+      "params": {
+        "reqPerSec": 111044.8,
+        "latencyAvg": 8.38,
+        "latencyP99": 13,
+        "throughputMBs": 20.229296875,
+        "totalRequests": 4441750,
+        "cpuPerReqMicros": 8.583283615692013,
+        "rssMB": 65.1015625,
+        "errors": 0
+      },
+      "post": {
+        "reqPerSec": 121348.8,
+        "latencyAvg": 7.84,
+        "latencyP99": 12,
+        "throughputMBs": 60.40625,
+        "totalRequests": 4853792,
+        "cpuPerReqMicros": 8.123979560722832,
+        "rssMB": 65.94921875,
+        "errors": 0
+      }
+    },
+    "fastify": {
+      "json": {
+        "reqPerSec": 54625.6,
+        "latencyAvg": 17.8,
+        "latencyP99": 33,
+        "throughputMBs": 9.79375,
+        "totalRequests": 2184988,
+        "cpuPerReqMicros": 18.41563981129416,
+        "rssMB": 107.359375,
+        "errors": 0
+      },
+      "params": {
+        "reqPerSec": 53646.4,
+        "latencyAvg": 18.15,
+        "latencyP99": 34,
+        "throughputMBs": 9.3125,
+        "totalRequests": 2145880,
+        "cpuPerReqMicros": 18.72786968516413,
+        "rssMB": 112.37109375,
+        "errors": 0
+      },
+      "post": {
+        "reqPerSec": 25335.2,
+        "latencyAvg": 38.97,
+        "latencyP99": 78,
+        "throughputMBs": 12.394140625,
+        "totalRequests": 1013329,
+        "cpuPerReqMicros": 40.052036406734636,
+        "rssMB": 108.01953125,
+        "errors": 0
+      }
+    },
+    "express": {
+      "json": {
+        "reqPerSec": 12992,
+        "latencyAvg": 76.41,
+        "latencyP99": 102,
+        "throughputMBs": 2.316650390625,
+        "totalRequests": 519643,
+        "cpuPerReqMicros": 89.05964864339556,
+        "rssMB": 168.734375,
+        "errors": 0
+      },
+      "params": {
+        "reqPerSec": 12438.4,
+        "latencyAvg": 79.84,
+        "latencyP99": 110,
+        "throughputMBs": 2.1470703125,
+        "totalRequests": 497502,
+        "cpuPerReqMicros": 92.53618075907232,
+        "rssMB": 168.45703125,
+        "errors": 0
+      },
+      "post": {
+        "reqPerSec": 7139.1,
+        "latencyAvg": 139.32,
+        "latencyP99": 185,
+        "throughputMBs": 3.485888671875,
+        "totalRequests": 285551,
+        "cpuPerReqMicros": 157.99715637486824,
+        "rssMB": 169.72265625,
+        "errors": 0
+      }
+    },
+    "koa": {
+      "json": {
+        "reqPerSec": 39391.81,
+        "latencyAvg": 24.89,
+        "latencyP99": 54,
+        "throughputMBs": 7.02529296875,
+        "totalRequests": 1575759,
+        "cpuPerReqMicros": 25.5940242130935,
+        "rssMB": 117.6484375,
+        "errors": 0
+      },
+      "params": {
+        "reqPerSec": 39158.4,
+        "latencyAvg": 25.03,
+        "latencyP99": 50,
+        "throughputMBs": 6.7587890625,
+        "totalRequests": 1566240,
+        "cpuPerReqMicros": 25.69121015936255,
+        "rssMB": 126.2734375,
+        "errors": 0
+      },
+      "post": {
+        "reqPerSec": 15136.7,
+        "latencyAvg": 65.52,
+        "latencyP99": 109,
+        "throughputMBs": 7.390966796875,
+        "totalRequests": 605436,
+        "cpuPerReqMicros": 67.38204203251871,
+        "rssMB": 115.3125,
+        "errors": 0
+      }
+    },
+    "hapi": {
+      "json": {
+        "reqPerSec": 35622.2,
+        "latencyAvg": 27.56,
+        "latencyP99": 55,
+        "throughputMBs": 7.950048828125,
+        "totalRequests": 1424955,
+        "cpuPerReqMicros": 28.568876210125932,
+        "rssMB": 123.953125,
+        "errors": 0
+      },
+      "params": {
+        "reqPerSec": 34795.2,
+        "latencyAvg": 28.22,
+        "latencyP99": 54,
+        "throughputMBs": 7.5658203125,
+        "totalRequests": 1391763,
+        "cpuPerReqMicros": 29.125057211608585,
+        "rssMB": 138.828125,
+        "errors": 0
+      },
+      "post": {
+        "reqPerSec": 12441.6,
+        "latencyAvg": 79.82,
+        "latencyP99": 121,
+        "throughputMBs": 6.3708984375,
+        "totalRequests": 497629,
+        "cpuPerReqMicros": 81.40250266765,
+        "rssMB": 139.984375,
+        "errors": 0
+      }
+    },
+    "hono": {
+      "json": {
+        "reqPerSec": 52655.2,
+        "latencyAvg": 18.5,
+        "latencyP99": 33,
+        "throughputMBs": 8.636914072036744,
+        "totalRequests": 2106234,
+        "cpuPerReqMicros": 19.12468842493284,
+        "rssMB": 103.09765625,
+        "errors": 0
+      },
+      "params": {
+        "reqPerSec": 51156,
+        "latencyAvg": 19.04,
+        "latencyP99": 36,
+        "throughputMBs": 8.09853515625,
+        "totalRequests": 2046177,
+        "cpuPerReqMicros": 19.64199040454467,
+        "rssMB": 107.96484375,
+        "errors": 0
+      },
+      "post": {
+        "reqPerSec": 23651.2,
+        "latencyAvg": 41.77,
+        "latencyP99": 81,
+        "throughputMBs": 11.2095703125,
+        "totalRequests": 945993,
+        "cpuPerReqMicros": 42.96923761592316,
+        "rssMB": 114.07421875,
+        "errors": 0
+      }
+    },
+    "h3": {
+      "json": {
+        "reqPerSec": 52802.4,
+        "latencyAvg": 18.46,
+        "latencyP99": 35,
+        "throughputMBs": 9.2654296875,
+        "totalRequests": 2112116,
+        "cpuPerReqMicros": 19.063013584481155,
+        "rssMB": 108.62109375,
+        "errors": 0
+      },
+      "params": {
+        "reqPerSec": 49445.6,
+        "latencyAvg": 19.72,
+        "latencyP99": 39,
+        "throughputMBs": 8.393115234375,
+        "totalRequests": 1977738,
+        "cpuPerReqMicros": 20.31146997226124,
+        "rssMB": 112.84375,
+        "errors": 0
+      },
+      "post": {
+        "reqPerSec": 24504.8,
+        "latencyAvg": 40.29,
+        "latencyP99": 80,
+        "throughputMBs": 11.8951171875,
+        "totalRequests": 980160,
+        "cpuPerReqMicros": 41.50515732125367,
+        "rssMB": 113.1953125,
+        "errors": 0
+      }
+    },
+    "polka": {
+      "json": {
+        "reqPerSec": 53497.6,
+        "latencyAvg": 18.2,
+        "latencyP99": 33,
+        "throughputMBs": 9.540625,
+        "totalRequests": 2139881,
+        "cpuPerReqMicros": 18.816017339281952,
+        "rssMB": 101.45703125,
+        "errors": 0
+      },
+      "params": {
+        "reqPerSec": 52186.4,
+        "latencyAvg": 18.67,
+        "latencyP99": 34,
+        "throughputMBs": 9.008935546875,
+        "totalRequests": 2087458,
+        "cpuPerReqMicros": 19.22840124208487,
+        "rssMB": 107.03515625,
+        "errors": 0
+      },
+      "post": {
+        "reqPerSec": 22725.2,
+        "latencyAvg": 43.49,
+        "latencyP99": 83,
+        "throughputMBs": 11.0962890625,
+        "totalRequests": 908963,
+        "cpuPerReqMicros": 45.07347823838814,
+        "rssMB": 111.47265625,
+        "errors": 0
+      }
+    },
+    "restify": {
+      "json": {
+        "reqPerSec": 39632,
+        "latencyAvg": 24.74,
+        "latencyP99": 51,
+        "throughputMBs": 7.1431640625,
+        "totalRequests": 1585196,
+        "cpuPerReqMicros": 25.44276102135004,
+        "rssMB": 113.609375,
+        "errors": 0
+      },
+      "params": {
+        "reqPerSec": 39060.81,
+        "latencyAvg": 25.1,
+        "latencyP99": 52,
+        "throughputMBs": 6.8169921875,
+        "totalRequests": 1562427,
+        "cpuPerReqMicros": 25.772422007556195,
+        "rssMB": 124.734375,
+        "errors": 0
+      },
+      "post": {
+        "reqPerSec": 17966.41,
+        "latencyAvg": 55.13,
+        "latencyP99": 97,
+        "throughputMBs": 8.806347665786744,
+        "totalRequests": 718656,
+        "cpuPerReqMicros": 56.78780390061448,
+        "rssMB": 112.80078125,
+        "errors": 0
+      }
+    },
+    "0http": {
+      "json": {
+        "reqPerSec": 50783.2,
+        "latencyAvg": 19.19,
+        "latencyP99": 41,
+        "throughputMBs": 9.0564453125,
+        "totalRequests": 2031295,
+        "cpuPerReqMicros": 25.42441250532296,
+        "rssMB": 147.06640625,
+        "errors": 0
+      },
+      "params": {
+        "reqPerSec": 49164,
+        "latencyAvg": 19.84,
+        "latencyP99": 43,
+        "throughputMBs": 8.486181640625,
+        "totalRequests": 1966486,
+        "cpuPerReqMicros": 26.08137561111546,
+        "rssMB": 153.66796875,
+        "errors": 0
+      },
+      "post": {
+        "reqPerSec": 25824,
+        "latencyAvg": 38.22,
+        "latencyP99": 84,
+        "throughputMBs": 12.609375,
+        "totalRequests": 1032897,
+        "cpuPerReqMicros": 50.86536411665442,
+        "rssMB": 169.1015625,
+        "errors": 0
+      }
+    },
+    "tinyhttp": {
+      "json": {
+        "reqPerSec": 28982.4,
+        "latencyAvg": 33.99,
+        "latencyP99": 71,
+        "throughputMBs": 4.892187509536743,
+        "totalRequests": 1159280,
+        "cpuPerReqMicros": 50.10575270857774,
+        "rssMB": 178.10546875,
+        "errors": 0
+      },
+      "params": {
+        "reqPerSec": 28880,
+        "latencyAvg": 34.12,
+        "latencyP99": 68,
+        "throughputMBs": 4.70966796875,
+        "totalRequests": 1155180,
+        "cpuPerReqMicros": 49.904690178154056,
+        "rssMB": 178.74609375,
+        "errors": 0
+      },
+      "post": {
+        "reqPerSec": 16631.91,
+        "latencyAvg": 59.6,
+        "latencyP99": 98,
+        "throughputMBs": 9.278955078125,
+        "totalRequests": 665281,
+        "cpuPerReqMicros": 79.99640001743624,
+        "rssMB": 183.12109375,
+        "errors": 0
+      }
+    },
+    "hyper-express": {
+      "json": {
+        "reqPerSec": 117510.4,
+        "latencyAvg": 8.13,
+        "latencyP99": 13,
+        "throughputMBs": 15.69013671875,
+        "totalRequests": 4700532,
+        "cpuPerReqMicros": 8.69258309484969,
+        "rssMB": 70.29296875,
+        "errors": 0
+      },
+      "params": {
+        "reqPerSec": 110748.8,
+        "latencyAvg": 8.45,
+        "latencyP99": 15,
+        "throughputMBs": 14.1529296875,
+        "totalRequests": 4429880,
+        "cpuPerReqMicros": 9.197355458838613,
+        "rssMB": 78.34765625,
+        "errors": 0
+      },
+      "post": {
+        "reqPerSec": 58482.4,
+        "latencyAvg": 16.62,
+        "latencyP99": 27,
+        "throughputMBs": 25.934765625,
+        "totalRequests": 2339297,
+        "cpuPerReqMicros": 17.622018495300082,
+        "rssMB": 100.80859375,
+        "errors": 0
+      }
+    },
+    "uws": {
+      "json": {
+        "reqPerSec": 123695.2,
+        "latencyAvg": 7.62,
+        "latencyP99": 11,
+        "throughputMBs": 18.51953125,
+        "totalRequests": 4947700,
+        "cpuPerReqMicros": 7.714001657335732,
+        "rssMB": 58.078125,
+        "errors": 0
+      },
+      "params": {
+        "reqPerSec": 122473.6,
+        "latencyAvg": 7.74,
+        "latencyP99": 10,
+        "throughputMBs": 17.636328125,
+        "totalRequests": 4898780,
+        "cpuPerReqMicros": 7.764544029329752,
+        "rssMB": 59.828125,
+        "errors": 0
+      },
+      "post": {
+        "reqPerSec": 100382.4,
+        "latencyAvg": 9.43,
+        "latencyP99": 16,
+        "throughputMBs": 46.14140625,
+        "totalRequests": 4015233,
+        "cpuPerReqMicros": 10.291947192105663,
+        "rssMB": 67.828125,
+        "errors": 0
+      }
+    }
+  },
+  "runs": {
+    "node-http": {
+      "json": [
+        {
+          "reqPerSec": 53742.4,
+          "latencyAvg": 18.12,
+          "latencyP99": 31,
+          "throughputMBs": 10.558203125,
+          "totalRequests": 2149677,
+          "cpuPerReqMicros": 18.721136245119617,
+          "rssMB": 102.85546875,
+          "errors": 0
+        }
+      ],
+      "params": [
+        {
+          "reqPerSec": 53199.2,
+          "latencyAvg": 18.31,
+          "latencyP99": 36,
+          "throughputMBs": 10.096484375,
+          "totalRequests": 2128074,
+          "cpuPerReqMicros": 18.861288188286686,
+          "rssMB": 108.078125,
+          "errors": 0
+        }
+      ],
+      "post": [
+        {
+          "reqPerSec": 26856.4,
+          "latencyAvg": 36.73,
+          "latencyP99": 75,
+          "throughputMBs": 13.599609375,
+          "totalRequests": 1074213,
+          "cpuPerReqMicros": 37.86262035555332,
+          "rssMB": 115.640625,
+          "errors": 0
+        }
+      ]
+    },
+    "kidlat": {
+      "json": [
+        {
+          "reqPerSec": 111264,
+          "latencyAvg": 8.37,
+          "latencyP99": 9,
+          "throughputMBs": 20.903125,
+          "totalRequests": 4450610,
+          "cpuPerReqMicros": 8.63444628938505,
+          "rssMB": 64.4765625,
+          "errors": 0
+        }
+      ],
+      "params": [
+        {
+          "reqPerSec": 111044.8,
+          "latencyAvg": 8.38,
+          "latencyP99": 13,
+          "throughputMBs": 20.229296875,
+          "totalRequests": 4441750,
+          "cpuPerReqMicros": 8.583283615692013,
+          "rssMB": 65.1015625,
+          "errors": 0
+        }
+      ],
+      "post": [
+        {
+          "reqPerSec": 121348.8,
+          "latencyAvg": 7.84,
+          "latencyP99": 12,
+          "throughputMBs": 60.40625,
+          "totalRequests": 4853792,
+          "cpuPerReqMicros": 8.123979560722832,
+          "rssMB": 65.94921875,
+          "errors": 0
+        }
+      ]
+    },
+    "fastify": {
+      "json": [
+        {
+          "reqPerSec": 54625.6,
+          "latencyAvg": 17.8,
+          "latencyP99": 33,
+          "throughputMBs": 9.79375,
+          "totalRequests": 2184988,
+          "cpuPerReqMicros": 18.41563981129416,
+          "rssMB": 107.359375,
+          "errors": 0
+        }
+      ],
+      "params": [
+        {
+          "reqPerSec": 53646.4,
+          "latencyAvg": 18.15,
+          "latencyP99": 34,
+          "throughputMBs": 9.3125,
+          "totalRequests": 2145880,
+          "cpuPerReqMicros": 18.72786968516413,
+          "rssMB": 112.37109375,
+          "errors": 0
+        }
+      ],
+      "post": [
+        {
+          "reqPerSec": 25335.2,
+          "latencyAvg": 38.97,
+          "latencyP99": 78,
+          "throughputMBs": 12.394140625,
+          "totalRequests": 1013329,
+          "cpuPerReqMicros": 40.052036406734636,
+          "rssMB": 108.01953125,
+          "errors": 0
+        }
+      ]
+    },
+    "express": {
+      "json": [
+        {
+          "reqPerSec": 12992,
+          "latencyAvg": 76.41,
+          "latencyP99": 102,
+          "throughputMBs": 2.316650390625,
+          "totalRequests": 519643,
+          "cpuPerReqMicros": 89.05964864339556,
+          "rssMB": 168.734375,
+          "errors": 0
+        }
+      ],
+      "params": [
+        {
+          "reqPerSec": 12438.4,
+          "latencyAvg": 79.84,
+          "latencyP99": 110,
+          "throughputMBs": 2.1470703125,
+          "totalRequests": 497502,
+          "cpuPerReqMicros": 92.53618075907232,
+          "rssMB": 168.45703125,
+          "errors": 0
+        }
+      ],
+      "post": [
+        {
+          "reqPerSec": 7139.1,
+          "latencyAvg": 139.32,
+          "latencyP99": 185,
+          "throughputMBs": 3.485888671875,
+          "totalRequests": 285551,
+          "cpuPerReqMicros": 157.99715637486824,
+          "rssMB": 169.72265625,
+          "errors": 0
+        }
+      ]
+    },
+    "koa": {
+      "json": [
+        {
+          "reqPerSec": 39391.81,
+          "latencyAvg": 24.89,
+          "latencyP99": 54,
+          "throughputMBs": 7.02529296875,
+          "totalRequests": 1575759,
+          "cpuPerReqMicros": 25.5940242130935,
+          "rssMB": 117.6484375,
+          "errors": 0
+        }
+      ],
+      "params": [
+        {
+          "reqPerSec": 39158.4,
+          "latencyAvg": 25.03,
+          "latencyP99": 50,
+          "throughputMBs": 6.7587890625,
+          "totalRequests": 1566240,
+          "cpuPerReqMicros": 25.69121015936255,
+          "rssMB": 126.2734375,
+          "errors": 0
+        }
+      ],
+      "post": [
+        {
+          "reqPerSec": 15136.7,
+          "latencyAvg": 65.52,
+          "latencyP99": 109,
+          "throughputMBs": 7.390966796875,
+          "totalRequests": 605436,
+          "cpuPerReqMicros": 67.38204203251871,
+          "rssMB": 115.3125,
+          "errors": 0
+        }
+      ]
+    },
+    "hapi": {
+      "json": [
+        {
+          "reqPerSec": 35622.2,
+          "latencyAvg": 27.56,
+          "latencyP99": 55,
+          "throughputMBs": 7.950048828125,
+          "totalRequests": 1424955,
+          "cpuPerReqMicros": 28.568876210125932,
+          "rssMB": 123.953125,
+          "errors": 0
+        }
+      ],
+      "params": [
+        {
+          "reqPerSec": 34795.2,
+          "latencyAvg": 28.22,
+          "latencyP99": 54,
+          "throughputMBs": 7.5658203125,
+          "totalRequests": 1391763,
+          "cpuPerReqMicros": 29.125057211608585,
+          "rssMB": 138.828125,
+          "errors": 0
+        }
+      ],
+      "post": [
+        {
+          "reqPerSec": 12441.6,
+          "latencyAvg": 79.82,
+          "latencyP99": 121,
+          "throughputMBs": 6.3708984375,
+          "totalRequests": 497629,
+          "cpuPerReqMicros": 81.40250266765,
+          "rssMB": 139.984375,
+          "errors": 0
+        }
+      ]
+    },
+    "hono": {
+      "json": [
+        {
+          "reqPerSec": 52655.2,
+          "latencyAvg": 18.5,
+          "latencyP99": 33,
+          "throughputMBs": 8.636914072036744,
+          "totalRequests": 2106234,
+          "cpuPerReqMicros": 19.12468842493284,
+          "rssMB": 103.09765625,
+          "errors": 0
+        }
+      ],
+      "params": [
+        {
+          "reqPerSec": 51156,
+          "latencyAvg": 19.04,
+          "latencyP99": 36,
+          "throughputMBs": 8.09853515625,
+          "totalRequests": 2046177,
+          "cpuPerReqMicros": 19.64199040454467,
+          "rssMB": 107.96484375,
+          "errors": 0
+        }
+      ],
+      "post": [
+        {
+          "reqPerSec": 23651.2,
+          "latencyAvg": 41.77,
+          "latencyP99": 81,
+          "throughputMBs": 11.2095703125,
+          "totalRequests": 945993,
+          "cpuPerReqMicros": 42.96923761592316,
+          "rssMB": 114.07421875,
+          "errors": 0
+        }
+      ]
+    },
+    "h3": {
+      "json": [
+        {
+          "reqPerSec": 52802.4,
+          "latencyAvg": 18.46,
+          "latencyP99": 35,
+          "throughputMBs": 9.2654296875,
+          "totalRequests": 2112116,
+          "cpuPerReqMicros": 19.063013584481155,
+          "rssMB": 108.62109375,
+          "errors": 0
+        }
+      ],
+      "params": [
+        {
+          "reqPerSec": 49445.6,
+          "latencyAvg": 19.72,
+          "latencyP99": 39,
+          "throughputMBs": 8.393115234375,
+          "totalRequests": 1977738,
+          "cpuPerReqMicros": 20.31146997226124,
+          "rssMB": 112.84375,
+          "errors": 0
+        }
+      ],
+      "post": [
+        {
+          "reqPerSec": 24504.8,
+          "latencyAvg": 40.29,
+          "latencyP99": 80,
+          "throughputMBs": 11.8951171875,
+          "totalRequests": 980160,
+          "cpuPerReqMicros": 41.50515732125367,
+          "rssMB": 113.1953125,
+          "errors": 0
+        }
+      ]
+    },
+    "polka": {
+      "json": [
+        {
+          "reqPerSec": 53497.6,
+          "latencyAvg": 18.2,
+          "latencyP99": 33,
+          "throughputMBs": 9.540625,
+          "totalRequests": 2139881,
+          "cpuPerReqMicros": 18.816017339281952,
+          "rssMB": 101.45703125,
+          "errors": 0
+        }
+      ],
+      "params": [
+        {
+          "reqPerSec": 52186.4,
+          "latencyAvg": 18.67,
+          "latencyP99": 34,
+          "throughputMBs": 9.008935546875,
+          "totalRequests": 2087458,
+          "cpuPerReqMicros": 19.22840124208487,
+          "rssMB": 107.03515625,
+          "errors": 0
+        }
+      ],
+      "post": [
+        {
+          "reqPerSec": 22725.2,
+          "latencyAvg": 43.49,
+          "latencyP99": 83,
+          "throughputMBs": 11.0962890625,
+          "totalRequests": 908963,
+          "cpuPerReqMicros": 45.07347823838814,
+          "rssMB": 111.47265625,
+          "errors": 0
+        }
+      ]
+    },
+    "restify": {
+      "json": [
+        {
+          "reqPerSec": 39632,
+          "latencyAvg": 24.74,
+          "latencyP99": 51,
+          "throughputMBs": 7.1431640625,
+          "totalRequests": 1585196,
+          "cpuPerReqMicros": 25.44276102135004,
+          "rssMB": 113.609375,
+          "errors": 0
+        }
+      ],
+      "params": [
+        {
+          "reqPerSec": 39060.81,
+          "latencyAvg": 25.1,
+          "latencyP99": 52,
+          "throughputMBs": 6.8169921875,
+          "totalRequests": 1562427,
+          "cpuPerReqMicros": 25.772422007556195,
+          "rssMB": 124.734375,
+          "errors": 0
+        }
+      ],
+      "post": [
+        {
+          "reqPerSec": 17966.41,
+          "latencyAvg": 55.13,
+          "latencyP99": 97,
+          "throughputMBs": 8.806347665786744,
+          "totalRequests": 718656,
+          "cpuPerReqMicros": 56.78780390061448,
+          "rssMB": 112.80078125,
+          "errors": 0
+        }
+      ]
+    },
+    "0http": {
+      "json": [
+        {
+          "reqPerSec": 50783.2,
+          "latencyAvg": 19.19,
+          "latencyP99": 41,
+          "throughputMBs": 9.0564453125,
+          "totalRequests": 2031295,
+          "cpuPerReqMicros": 25.42441250532296,
+          "rssMB": 147.06640625,
+          "errors": 0
+        }
+      ],
+      "params": [
+        {
+          "reqPerSec": 49164,
+          "latencyAvg": 19.84,
+          "latencyP99": 43,
+          "throughputMBs": 8.486181640625,
+          "totalRequests": 1966486,
+          "cpuPerReqMicros": 26.08137561111546,
+          "rssMB": 153.66796875,
+          "errors": 0
+        }
+      ],
+      "post": [
+        {
+          "reqPerSec": 25824,
+          "latencyAvg": 38.22,
+          "latencyP99": 84,
+          "throughputMBs": 12.609375,
+          "totalRequests": 1032897,
+          "cpuPerReqMicros": 50.86536411665442,
+          "rssMB": 169.1015625,
+          "errors": 0
+        }
+      ]
+    },
+    "tinyhttp": {
+      "json": [
+        {
+          "reqPerSec": 28982.4,
+          "latencyAvg": 33.99,
+          "latencyP99": 71,
+          "throughputMBs": 4.892187509536743,
+          "totalRequests": 1159280,
+          "cpuPerReqMicros": 50.10575270857774,
+          "rssMB": 178.10546875,
+          "errors": 0
+        }
+      ],
+      "params": [
+        {
+          "reqPerSec": 28880,
+          "latencyAvg": 34.12,
+          "latencyP99": 68,
+          "throughputMBs": 4.70966796875,
+          "totalRequests": 1155180,
+          "cpuPerReqMicros": 49.904690178154056,
+          "rssMB": 178.74609375,
+          "errors": 0
+        }
+      ],
+      "post": [
+        {
+          "reqPerSec": 16631.91,
+          "latencyAvg": 59.6,
+          "latencyP99": 98,
+          "throughputMBs": 9.278955078125,
+          "totalRequests": 665281,
+          "cpuPerReqMicros": 79.99640001743624,
+          "rssMB": 183.12109375,
+          "errors": 0
+        }
+      ]
+    },
+    "hyper-express": {
+      "json": [
+        {
+          "reqPerSec": 117510.4,
+          "latencyAvg": 8.13,
+          "latencyP99": 13,
+          "throughputMBs": 15.69013671875,
+          "totalRequests": 4700532,
+          "cpuPerReqMicros": 8.69258309484969,
+          "rssMB": 70.29296875,
+          "errors": 0
+        }
+      ],
+      "params": [
+        {
+          "reqPerSec": 110748.8,
+          "latencyAvg": 8.45,
+          "latencyP99": 15,
+          "throughputMBs": 14.1529296875,
+          "totalRequests": 4429880,
+          "cpuPerReqMicros": 9.197355458838613,
+          "rssMB": 78.34765625,
+          "errors": 0
+        }
+      ],
+      "post": [
+        {
+          "reqPerSec": 58482.4,
+          "latencyAvg": 16.62,
+          "latencyP99": 27,
+          "throughputMBs": 25.934765625,
+          "totalRequests": 2339297,
+          "cpuPerReqMicros": 17.622018495300082,
+          "rssMB": 100.80859375,
+          "errors": 0
+        }
+      ]
+    },
+    "uws": {
+      "json": [
+        {
+          "reqPerSec": 123695.2,
+          "latencyAvg": 7.62,
+          "latencyP99": 11,
+          "throughputMBs": 18.51953125,
+          "totalRequests": 4947700,
+          "cpuPerReqMicros": 7.714001657335732,
+          "rssMB": 58.078125,
+          "errors": 0
+        }
+      ],
+      "params": [
+        {
+          "reqPerSec": 122473.6,
+          "latencyAvg": 7.74,
+          "latencyP99": 10,
+          "throughputMBs": 17.636328125,
+          "totalRequests": 4898780,
+          "cpuPerReqMicros": 7.764544029329752,
+          "rssMB": 59.828125,
+          "errors": 0
+        }
+      ],
+      "post": [
+        {
+          "reqPerSec": 100382.4,
+          "latencyAvg": 9.43,
+          "latencyP99": 16,
+          "throughputMBs": 46.14140625,
+          "totalRequests": 4015233,
+          "cpuPerReqMicros": 10.291947192105663,
+          "rssMB": 67.828125,
+          "errors": 0
+        }
+      ]
+    }
+  }
+}
